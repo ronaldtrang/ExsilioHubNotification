@@ -1,0 +1,10 @@
+C:\Users\v-rotran\OneDrive - Exsilio\Projects\ExsilioHubNotification\ExsilioHubNotification.Data\bin\Debug\ExsilioHubNotification.Data.dll.config
+C:\Users\v-rotran\OneDrive - Exsilio\Projects\ExsilioHubNotification\ExsilioHubNotification.Data\bin\Debug\ExsilioHubNotification.Data.dll
+C:\Users\v-rotran\OneDrive - Exsilio\Projects\ExsilioHubNotification\ExsilioHubNotification.Data\bin\Debug\ExsilioHubNotification.Data.pdb
+C:\Users\v-rotran\OneDrive - Exsilio\Projects\ExsilioHubNotification\ExsilioHubNotification.Data\bin\Debug\EntityFramework.dll
+C:\Users\v-rotran\OneDrive - Exsilio\Projects\ExsilioHubNotification\ExsilioHubNotification.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\v-rotran\OneDrive - Exsilio\Projects\ExsilioHubNotification\ExsilioHubNotification.Data\bin\Debug\EntityFramework.xml
+C:\Users\v-rotran\OneDrive - Exsilio\Projects\ExsilioHubNotification\ExsilioHubNotification.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\v-rotran\OneDrive - Exsilio\Projects\ExsilioHubNotification\ExsilioHubNotification.Data\obj\Debug\ExsilioHubNotification.Data.csprojResolveAssemblyReference.cache
+C:\Users\v-rotran\OneDrive - Exsilio\Projects\ExsilioHubNotification\ExsilioHubNotification.Data\obj\Debug\ExsilioHubNotification.Data.dll
+C:\Users\v-rotran\OneDrive - Exsilio\Projects\ExsilioHubNotification\ExsilioHubNotification.Data\obj\Debug\ExsilioHubNotification.Data.pdb

@@ -1,0 +1,5 @@
+C:\Users\v-rotran\OneDrive - Exsilio\Projects\ExsilioHubNotification\ExsilioHubNotification.Client\bin\Debug\ExsilioHubNotification.Client.dll
+C:\Users\v-rotran\OneDrive - Exsilio\Projects\ExsilioHubNotification\ExsilioHubNotification.Client\bin\Debug\ExsilioHubNotification.Client.pdb
+C:\Users\v-rotran\OneDrive - Exsilio\Projects\ExsilioHubNotification\ExsilioHubNotification.Client\obj\Debug\ExsilioHubNotification.Client.csprojResolveAssemblyReference.cache
+C:\Users\v-rotran\OneDrive - Exsilio\Projects\ExsilioHubNotification\ExsilioHubNotification.Client\obj\Debug\ExsilioHubNotification.Client.dll
+C:\Users\v-rotran\OneDrive - Exsilio\Projects\ExsilioHubNotification\ExsilioHubNotification.Client\obj\Debug\ExsilioHubNotification.Client.pdb
