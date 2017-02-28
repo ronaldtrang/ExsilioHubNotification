@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ExsilioHubNotification.Data
+namespace ExsilioHubNotification.Model
 {
     using System;
     using System.Data.Entity;
@@ -26,5 +26,6 @@ namespace ExsilioHubNotification.Data
         }
     
         public virtual DbSet<EmailTemplate> EmailTemplates { get; set; }
+        public virtual DbSet<Log> Logs { get; set; }
     }
 }

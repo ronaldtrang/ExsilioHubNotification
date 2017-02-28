@@ -191,6 +191,16 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExsilioHubNotification.Data\ExsilioHubNotification.Data.csproj">
+      <Project>{54472986-dc80-415d-9de4-3fdee50989a1}</Project>
+      <Name>ExsilioHubNotification.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExsilioHubNotification.Repository\ExsilioHubNotification.Repository.csproj">
+      <Project>{291eb835-e5e6-419c-a4b7-739a9013168d}</Project>
+      <Name>ExsilioHubNotification.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

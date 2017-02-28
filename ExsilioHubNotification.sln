@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExsilioHubNotification.Clie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExsilioHubNotification.Data", "ExsilioHubNotification.Data\ExsilioHubNotification.Data.csproj", "{54472986-DC80-415D-9DE4-3FDEE50989A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExsilioHubNotification.Repository", "ExsilioHubNotification.Repository\ExsilioHubNotification.Repository.csproj", "{291EB835-E5E6-419C-A4B7-739A9013168D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExsilioHubNotification.Repository.UnitTest", "ExsilioHubNotification.Repository.UnitTest\ExsilioHubNotification.Repository.UnitTest.csproj", "{5388B581-CEB6-4E80-BFB8-76BFFEAE2EF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExsilioHubNotification.Model", "ExsilioHubNotification.Model\ExsilioHubNotification.Model.csproj", "{53797C0B-B691-4136-AF4B-D495AFAA2DA7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +39,18 @@ Global
 		{54472986-DC80-415D-9DE4-3FDEE50989A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54472986-DC80-415D-9DE4-3FDEE50989A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54472986-DC80-415D-9DE4-3FDEE50989A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{291EB835-E5E6-419C-A4B7-739A9013168D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{291EB835-E5E6-419C-A4B7-739A9013168D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{291EB835-E5E6-419C-A4B7-739A9013168D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{291EB835-E5E6-419C-A4B7-739A9013168D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5388B581-CEB6-4E80-BFB8-76BFFEAE2EF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5388B581-CEB6-4E80-BFB8-76BFFEAE2EF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5388B581-CEB6-4E80-BFB8-76BFFEAE2EF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5388B581-CEB6-4E80-BFB8-76BFFEAE2EF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53797C0B-B691-4136-AF4B-D495AFAA2DA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53797C0B-B691-4136-AF4B-D495AFAA2DA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53797C0B-B691-4136-AF4B-D495AFAA2DA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53797C0B-B691-4136-AF4B-D495AFAA2DA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

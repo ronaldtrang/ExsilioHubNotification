@@ -7,19 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ExsilioHubNotification.Data
+namespace ExsilioHubNotification.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class EmailTemplate
+    public partial class Log
     {
-        public int EmailTemplateId { get; set; }
-        public string Name { get; set; }
-        public string EmailTemplate1 { get; set; }
-        public string EmailSubject { get; set; }
-        public bool IsActive { get; set; }
-        public System.DateTime CreateDate { get; set; }
-        public Nullable<System.DateTime> UpdateDate { get; set; }
+        public int LogId { get; set; }
+        public System.DateTime Logged { get; set; }
+        public string Level { get; set; }
+        public string Message { get; set; }
+        public string Subject { get; set; }
+        public string Callsite { get; set; }
+        public string Exception { get; set; }
     }
 }

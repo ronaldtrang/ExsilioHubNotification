@@ -4,7 +4,6 @@ using System.Net.Mail;
 using System.Threading.Tasks;
 using System.Web.Http;
 using NLog.Fluent;
-using NLog.LayoutRenderers;
 using System;
 
 namespace ExsilioHubNotification.Web.Controllers
@@ -40,10 +39,11 @@ namespace ExsilioHubNotification.Web.Controllers
                 {
                     mail.From = new MailAddress(notification.From, notification.FromDisplayName);
                 }
-
+                
                 mail.To.Add(new MailAddress(notification.To));
                 mail.Subject = notification.Subject;
                 mail.Body = notification.Body;
+                mail.IsBodyHtml = true;
                 
                 // Callback when email is processed
                 smtp.SendCompleted += (object sender, AsyncCompletedEventArgs e) => {
