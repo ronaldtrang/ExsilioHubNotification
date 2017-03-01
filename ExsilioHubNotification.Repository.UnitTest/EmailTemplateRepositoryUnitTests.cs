@@ -1,4 +1,4 @@
-﻿using ExsilioHubNotification.Model;
+﻿using ExsilioHubNotification.Data;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 

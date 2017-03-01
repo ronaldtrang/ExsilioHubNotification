@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExsilioHubNotification.Repo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExsilioHubNotification.Repository.UnitTest", "ExsilioHubNotification.Repository.UnitTest\ExsilioHubNotification.Repository.UnitTest.csproj", "{5388B581-CEB6-4E80-BFB8-76BFFEAE2EF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExsilioHubNotification.Model", "ExsilioHubNotification.Model\ExsilioHubNotification.Model.csproj", "{53797C0B-B691-4136-AF4B-D495AFAA2DA7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExsilioHubNotification.Client.Console", "ExsilioHubNotification.Client.Console\ExsilioHubNotification.Client.Console.csproj", "{4D6BA5ED-8920-4F0F-AC9B-0AE8EDE813FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +47,10 @@ Global
 		{5388B581-CEB6-4E80-BFB8-76BFFEAE2EF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5388B581-CEB6-4E80-BFB8-76BFFEAE2EF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5388B581-CEB6-4E80-BFB8-76BFFEAE2EF5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{53797C0B-B691-4136-AF4B-D495AFAA2DA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{53797C0B-B691-4136-AF4B-D495AFAA2DA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{53797C0B-B691-4136-AF4B-D495AFAA2DA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{53797C0B-B691-4136-AF4B-D495AFAA2DA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D6BA5ED-8920-4F0F-AC9B-0AE8EDE813FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D6BA5ED-8920-4F0F-AC9B-0AE8EDE813FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D6BA5ED-8920-4F0F-AC9B-0AE8EDE813FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D6BA5ED-8920-4F0F-AC9B-0AE8EDE813FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

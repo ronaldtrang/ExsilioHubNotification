@@ -5,75 +5,87 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using NLog.Fluent;
 using System;
+using ExsilioHubNotification.Repository;
 
 namespace ExsilioHubNotification.Web.Controllers
 {
     public class NotificationController : ApiController
     {
+        /// <summary>
+        /// Get the email template based on the TemplatedId
+        /// </summary>
+        /// <param name="id">Provide the TemplateId</param>
+        /// <returns></returns>
         [HttpGet]
-        public async Task Get()
+        public string Get(int id)
         {
-            NotificationData data = new NotificationData();
-            data.From = "noreply@example.com";
-            data.FromDisplayName = "Sender Test";
-            data.To = "ronaldt@exsilio.com";
-            data.Subject = "Test Test";
-            data.Body = "Test Body";
+            EmailTemplateRepository repo = new EmailTemplateRepository();
+            var result = repo.GetEmailTemplate(id);
 
-            await Post(data);
+            return result;
         }
 
+        /// <summary>
+        /// Send the email
+        /// </summary>
+        /// <param name="notification">Provide all of the require properties</param>
+        /// <returns></returns>
         [HttpPost]
-        public async Task Post(NotificationData notification)
+        public async Task<string> Post(NotificationData notification)
         {
-            try
-            {
-                MailMessage mail = new MailMessage();
-                SmtpClient smtp = new SmtpClient();
+            MailMessage mail = new MailMessage();
+            SmtpClient smtp = new SmtpClient();
+            string message = String.Empty;
 
-                if (string.IsNullOrEmpty(notification.FromDisplayName))
+            if (string.IsNullOrEmpty(notification.FromDisplayName))
+            {
+                mail.From = new MailAddress(notification.To);
+            }
+            else
+            {
+                mail.From = new MailAddress(notification.From, notification.FromDisplayName);
+            }
+
+            mail.To.Add(new MailAddress(notification.To));
+            mail.Subject = notification.Subject;
+            mail.Body = notification.Body;
+            mail.IsBodyHtml = true;
+
+            
+            // Callback when email is processed
+            smtp.SendCompleted += (object sender, AsyncCompletedEventArgs e) =>
+            {
+                if (e.Error != null)
                 {
-                    mail.From = new MailAddress(notification.To);
+                    message = "There was an error sending the email.";
+                    Log.Error().Message(message)
+                               .Property("subject", mail.Subject)
+                               .Exception(e.Error).Write();
+                }
+                else if (e.Cancelled)
+                {
+                    message = "The email has been cancelled.";
+
+                    Log.Error().Message(message)
+                               .Property("subject", mail.Subject).Write();
                 }
                 else
                 {
-                    mail.From = new MailAddress(notification.From, notification.FromDisplayName);
+                    message = "The email is successfully sent.";
+
+                    Log.Info().Message(message)
+                              .Property("subject", mail.Subject).Write();
+
+                    
                 }
-                
-                mail.To.Add(new MailAddress(notification.To));
-                mail.Subject = notification.Subject;
-                mail.Body = notification.Body;
-                mail.IsBodyHtml = true;
-                
-                // Callback when email is processed
-                smtp.SendCompleted += (object sender, AsyncCompletedEventArgs e) => {
-                    if (e.Error != null)
-                    {
-                        Log.Error().Message("There was an error sending the email.")
-                                   .Property("subject", mail.Subject)
-                                   .Exception(e.Error).Write();
-                    }
-                    else if (e.Cancelled)
-                    {
-                        Log.Error().Message("The email has been cancelled.")
-                                   .Property("subject", mail.Subject).Write();
-                    }
-                    else
-                    {
-                        Log.Info().Message("The email is successfully sent.")
-                                  .Property("subject", mail.Subject).Write();
-                    }
 
-                    mail.Dispose();
-                    smtp.Dispose();
-                };
+                mail.Dispose();
+                smtp.Dispose();
+            };
 
-                await smtp.SendMailAsync(mail);
-            }
-            catch (Exception ex)
-            {
-                Log.Error().Message("Error").Exception(ex).Write();
-            }
+            await smtp.SendMailAsync(mail);
+
+            return message;
         }
     }
 }

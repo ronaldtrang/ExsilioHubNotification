@@ -59,10 +59,6 @@
       <Project>{54472986-DC80-415D-9DE4-3FDEE50989A1}</Project>
       <Name>ExsilioHubNotification.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ExsilioHubNotification.Model\ExsilioHubNotification.Model.csproj">
-      <Project>{53797C0B-B691-4136-AF4B-D495AFAA2DA7}</Project>
-      <Name>ExsilioHubNotification.Model</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

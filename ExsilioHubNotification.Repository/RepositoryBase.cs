@@ -1,4 +1,4 @@
-﻿using ExsilioHubNotification.Model;
+﻿using ExsilioHubNotification.Data;
 using System;
 
 namespace ExsilioHubNotification.Repository

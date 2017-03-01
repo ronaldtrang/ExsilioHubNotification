@@ -51,26 +51,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExsilioHubNotificationEntities.Designer.cs">
+    <Compile Include="EmailTemplate.cs">
+      <DependentUpon>ExsilioHubNotification.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExsilioHubNotification.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ExsilioHubNotificationEntities.edmx</DependentUpon>
+      <DependentUpon>ExsilioHubNotification.Context.tt</DependentUpon>
     </Compile>
+    <Compile Include="ExsilioHubNotification.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExsilioHubNotification.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExsilioHubNotification.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExsilioHubNotification.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Log.cs">
+      <DependentUpon>ExsilioHubNotification.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Partial\ExsilioHubNotification.Context.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="ExsilioHubNotificationEntities.edmx">
+    <EntityDeploy Include="ExsilioHubNotification.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ExsilioHubNotificationEntities.Designer.cs</LastGenOutput>
+      <LastGenOutput>ExsilioHubNotification.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="ExsilioHubNotificationEntities.edmx.diagram">
-      <DependentUpon>ExsilioHubNotificationEntities.edmx</DependentUpon>
+    <None Include="ExsilioHubNotification.edmx.diagram">
+      <DependentUpon>ExsilioHubNotification.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ExsilioHubNotification.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ExsilioHubNotification.edmx</DependentUpon>
+      <LastGenOutput>ExsilioHubNotification.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ExsilioHubNotification.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ExsilioHubNotification.edmx</DependentUpon>
+      <LastGenOutput>ExsilioHubNotification.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
