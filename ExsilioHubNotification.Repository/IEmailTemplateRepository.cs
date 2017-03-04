@@ -2,7 +2,7 @@
 
 namespace ExsilioHubNotification.Repository
 {
-    public interface IEmailTemplateRepository : IDisposable
+    public interface IEmailTemplateRepository
     {
         string GetEmailTemplate(int templateId);
     }
