@@ -5,31 +5,27 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System;
 using ExsilioHubNotification.Repository;
-using NLog;
 using NLog.Fluent;
-using System.Security.Cryptography;
-using ExsilioHubNotification.Data;
 
 namespace ExsilioHubNotification.Web.Controllers
 {
     public class NotificationController : ApiController
     {
-        private IEmailTemplateRepository _repo;
+        private IEmailTemplateRepository repo;
 
-        public NotificationController(IEmailTemplateRepository repo)
+        public NotificationController(IEmailTemplateRepository repository)
         {
-            _repo = repo;
+            repo = repository;
         }
 
         /// <summary>
         /// Get the email template based on the TemplatedId
         /// </summary>
-        /// <param name="id">Provide the TemplateId</param>
-        /// <returns></returns>
+        /// <param name="id">Id of the template</param>
+        /// <returns>An email template</returns>
         [HttpGet]
         public string Get(int id)
         {
-            EmailTemplateRepository repo = new EmailTemplateRepository(new ExsilioHubNotificationEntities());
             var result = repo.GetEmailTemplate(id);
 
             return result;
@@ -39,7 +35,7 @@ namespace ExsilioHubNotification.Web.Controllers
         /// Send the email
         /// </summary>
         /// <param name="notification">Provide all of the require properties</param>
-        /// <returns></returns>
+        /// <returns>Status of the email</returns>
         [HttpPost]
         public async Task<string> Post(NotificationData notification)
         {
@@ -67,7 +63,7 @@ namespace ExsilioHubNotification.Web.Controllers
                 if (e.Error != null)
                 {
                     message = "There was an error sending the email.";
-                    NLog.Fluent.Log.Error().Message(message)
+                    Log.Error().Message(message)
                                .Property("subject", mail.Subject)
                                .Exception(e.Error).Write();
                 }
@@ -75,14 +71,14 @@ namespace ExsilioHubNotification.Web.Controllers
                 {
                     message = "The email has been cancelled.";
 
-                    NLog.Fluent.Log.Error().Message(message)
+                    Log.Error().Message(message)
                                .Property("subject", mail.Subject).Write();
                 }
                 else
                 {
                     message = "The email is successfully sent.";
 
-                    NLog.Fluent.Log.Info().Message(message)
+                    Log.Info().Message(message)
                               .Property("subject", mail.Subject).Write();
                 }
 

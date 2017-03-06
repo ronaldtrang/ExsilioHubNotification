@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ExsilioHubNotification.Repository
+﻿namespace ExsilioHubNotification.Repository
 {
     public interface IEmailTemplateRepository
     {

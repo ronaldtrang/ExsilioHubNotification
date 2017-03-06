@@ -49,11 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DisposableService.cs" />
     <Compile Include="EmailTemplateRepository.cs" />
     <Compile Include="IEmailTemplateRepository.cs" />
-    <Compile Include="IRepositoryBase.cs" />
-    <Compile Include="RepositoryBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

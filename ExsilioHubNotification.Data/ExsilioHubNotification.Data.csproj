@@ -72,7 +72,6 @@
     <Compile Include="Log.cs">
       <DependentUpon>ExsilioHubNotification.tt</DependentUpon>
     </Compile>
-    <Compile Include="Partial\ExsilioHubNotification.Context.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -6,6 +6,7 @@ namespace ExsilioHubNotification.Web.App_Start
     using SimpleInjector;
     using SimpleInjector.Integration.WebApi;
     using Repository;
+    using Data;
 
     public static class SimpleInjectorWebApiInitializer
     {
@@ -27,7 +28,8 @@ namespace ExsilioHubNotification.Web.App_Start
      
         private static void InitializeContainer(Container container)
         {
-            //container.Register<IEmailTemplateRepository, EmailTemplateRepository>(Lifestyle.Transient);
+            container.Register<IEmailTemplateRepository, EmailTemplateRepository>();
+            container.Register<ExsilioHubNotificationEntities>(Lifestyle.Scoped);
         }
     }
 }
