@@ -8,7 +8,6 @@ namespace ExsilioHubNotification.Client.Console
     {
         static void Main(string[] args)
         {
-            Notification notification = new Notification();
             SendEmail().GetAwaiter().GetResult();
         }
 

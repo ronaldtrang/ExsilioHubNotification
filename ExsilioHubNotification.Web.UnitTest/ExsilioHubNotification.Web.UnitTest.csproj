@@ -87,14 +87,6 @@
       <Project>{B90B4CDF-F615-44E2-80E1-754371D27125}</Project>
       <Name>ExsilioHubNotification.Client</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ExsilioHubNotification.Data\ExsilioHubNotification.Data.csproj">
-      <Project>{54472986-DC80-415D-9DE4-3FDEE50989A1}</Project>
-      <Name>ExsilioHubNotification.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ExsilioHubNotification.Repository\ExsilioHubNotification.Repository.csproj">
-      <Project>{291EB835-E5E6-419C-A4B7-739A9013168D}</Project>
-      <Name>ExsilioHubNotification.Repository</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ExsilioHubNotification.Web\ExsilioHubNotification.Web.csproj">
       <Project>{CA2AEEDC-42AC-4CA1-B368-67745F8601B7}</Project>
       <Name>ExsilioHubNotification.Web</Name>

@@ -7,10 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExsilioHubNotification.Web"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExsilioHubNotification.Client", "ExsilioHubNotification.Client\ExsilioHubNotification.Client.csproj", "{B90B4CDF-F615-44E2-80E1-754371D27125}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExsilioHubNotification.Data", "ExsilioHubNotification.Data\ExsilioHubNotification.Data.csproj", "{54472986-DC80-415D-9DE4-3FDEE50989A1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExsilioHubNotification.Repository", "ExsilioHubNotification.Repository\ExsilioHubNotification.Repository.csproj", "{291EB835-E5E6-419C-A4B7-739A9013168D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExsilioHubNotification.Client.Console", "ExsilioHubNotification.Client.Console\ExsilioHubNotification.Client.Console.csproj", "{4D6BA5ED-8920-4F0F-AC9B-0AE8EDE813FA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExsilioHubNotification.Web.UnitTest", "ExsilioHubNotification.Web.UnitTest\ExsilioHubNotification.Web.UnitTest.csproj", "{C2060976-036C-4482-A8FC-87012AD129B5}"
@@ -29,14 +25,6 @@ Global
 		{B90B4CDF-F615-44E2-80E1-754371D27125}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B90B4CDF-F615-44E2-80E1-754371D27125}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B90B4CDF-F615-44E2-80E1-754371D27125}.Release|Any CPU.Build.0 = Release|Any CPU
-		{54472986-DC80-415D-9DE4-3FDEE50989A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{54472986-DC80-415D-9DE4-3FDEE50989A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{54472986-DC80-415D-9DE4-3FDEE50989A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{54472986-DC80-415D-9DE4-3FDEE50989A1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{291EB835-E5E6-419C-A4B7-739A9013168D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{291EB835-E5E6-419C-A4B7-739A9013168D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{291EB835-E5E6-419C-A4B7-739A9013168D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{291EB835-E5E6-419C-A4B7-739A9013168D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4D6BA5ED-8920-4F0F-AC9B-0AE8EDE813FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4D6BA5ED-8920-4F0F-AC9B-0AE8EDE813FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D6BA5ED-8920-4F0F-AC9B-0AE8EDE813FA}.Release|Any CPU.ActiveCfg = Release|Any CPU

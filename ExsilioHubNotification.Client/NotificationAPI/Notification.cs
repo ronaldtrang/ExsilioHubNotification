@@ -13,24 +13,10 @@ namespace ExsilioHubNotification.Client.NotificationAPI
     {
         static HttpClient client = new HttpClient();
 
-        public async Task<string> GetWithHttpMessageAsync(int id)
-        {
-            string template = null;
-            client.BaseAddress = new Uri("http://localhost:26256/");
-            var path = "/api/notification/get/" + id;
-            HttpResponseMessage response = await client.GetAsync(path);
-
-            if (response.IsSuccessStatusCode)
-            {
-                template = await response.Content.ReadAsAsync<string>();
-            }
-
-            return template;
-        }
-
         public async Task<string> PostWithHttpMessageAsync(NotificationData data)
         {
             client.BaseAddress = new Uri("http://localhost:26256/");
+            client.DefaultRequestHeaders.Add("API-Key", "testtesttest");
             var path = "/api/notification/post";
             HttpResponseMessage response = await client.PostAsJsonAsync(path, data);
             string message = await response.Content.ReadAsAsync<string>();

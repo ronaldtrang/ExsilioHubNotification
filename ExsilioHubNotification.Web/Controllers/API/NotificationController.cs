@@ -4,33 +4,15 @@ using System.Net.Mail;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System;
-using ExsilioHubNotification.Repository;
 using NLog.Fluent;
+using System.Collections.Generic;
+using System.Linq;
+using System.Configuration;
 
 namespace ExsilioHubNotification.Web.Controllers
 {
     public class NotificationController : ApiController
     {
-        private IEmailTemplateRepository repo;
-
-        public NotificationController(IEmailTemplateRepository repository)
-        {
-            repo = repository;
-        }
-
-        /// <summary>
-        /// Get the email template based on the TemplatedId
-        /// </summary>
-        /// <param name="id">Id of the template</param>
-        /// <returns>An email template</returns>
-        [HttpGet]
-        public string Get(int id)
-        {
-            var result = repo.GetEmailTemplate(id);
-
-            return result;
-        }
-
         /// <summary>
         /// Send the email
         /// </summary>
@@ -39,6 +21,16 @@ namespace ExsilioHubNotification.Web.Controllers
         [HttpPost]
         public async Task<string> Post(NotificationData notification)
         {
+            IEnumerable<string> apiKeyHeaderValues = null;
+
+            if (Request.Headers.TryGetValues("API-Key", out apiKeyHeaderValues)) {
+                var apiKeyHeaderValue = apiKeyHeaderValues.First();
+
+                if (apiKeyHeaderValue == ConfigurationManager.AppSettings["APIKey"]) {
+                    var result = ConfigurationManager.AppSettings["APIKey"];
+                }
+            }
+
             MailMessage mail = new MailMessage();
             SmtpClient smtp = new SmtpClient();
             string message = String.Empty;
